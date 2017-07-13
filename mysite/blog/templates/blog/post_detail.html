@@ -37,4 +37,7 @@
 	{% empty %}
 		<p>No comments here yet :(</p>
 	{% endfor %}
+	<div>
+	<p class="footer"><a href="{% url 'logout' %}">Log out</a></p>
+	</div>
 {% endblock %}
