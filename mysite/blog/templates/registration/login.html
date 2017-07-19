@@ -1,8 +1,9 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
+
+	{% if form.errors %}
+        <p>Your username and/or password didn't match. Please try again.</p>
     {% endif %}
 
     <form method="post" action="{% url 'login' %}">
@@ -21,4 +22,9 @@
         <input type="submit" value="login" />
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
+	<!--<div>
+	<footer>
+	<h1 style="background-color:maroon; font-size:30pt; font-family: 'Lobster', cursive; padding:20px 20px; margin-bottom:0px; color:white;"> <a href="{% url 'signup' %}" style="color:white;">SignUp</a></h1>
+	</footer>
+	</div>-->
 {% endblock %}

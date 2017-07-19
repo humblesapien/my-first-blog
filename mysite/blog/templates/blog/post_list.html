@@ -3,7 +3,8 @@
 	
 	{% for post in posts %}
 		<div class="post">
-			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>	
+			<h3>posted by: {{ post.author }}</h3>
 			<div class="date">
 				<p>published: {{ post.published_date }}</p>
 			</div>
@@ -11,7 +12,5 @@
 				<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 		</div>
 	{% endfor %}
-	<div>
-	<p class="footer"><a href="{% url 'logout' %}">Logout</a></p>
-	</div>
+
 {% endblock %}
