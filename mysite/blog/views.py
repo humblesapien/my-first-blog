@@ -89,7 +89,7 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
 	
-def index(request):
+def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -101,4 +101,4 @@ def index(request):
             return redirect('login')
     else:
         form = UserCreationForm()
-    return render(request, 'blog/signup.html', {'form': form})
+    return render(request, 'blog/signup.html', {'form': form})=
