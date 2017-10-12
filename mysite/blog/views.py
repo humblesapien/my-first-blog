@@ -101,4 +101,4 @@ def signup(request):
             return redirect('login')
     else:
         form = UserCreationForm()
-    return render(request, 'blog/signup.html', {'form': form})=
+    return render(request, 'blog/signup.html', {'form': form})
