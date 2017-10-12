@@ -89,7 +89,7 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
 	
-def signup(request):
+def index(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
